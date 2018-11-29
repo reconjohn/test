@@ -15,6 +15,7 @@ library(gapminder)
 library(dplyr)
 library(ggplot2)
 library(tidyr)
+library(GGally)
 
 #+ r
 ## gapminder
@@ -80,9 +81,43 @@ iris.wide <- iris %>%
   separate(key, c("Part", "Measure"), "\\.") %>%
   spread(Measure, value)
 
+
 ggplot(iris.wide, aes(x = Length, y = Width, color = Part)) +
   geom_jitter() +
   facet_grid(. ~ Species)
+
+
+## cluster analysis
+ggpairs(iris,mapping=aes(color=Species))
+
+ggpairs(iris, columns = 1:4, 
+        aes(color=Species, alpha=0.4), 
+        title="Scatterplot Matrix",
+        upper=list(continuous="density", combo="box"),
+        lower=list(continuous="smooth", combo="dot")) +
+  theme_light() +
+  theme(plot.title=element_text(size=10))
+
+ggplot(iris, aes(x=Petal.Length, y=Sepal.Width, colour=Species) ) +
+  geom_point(size= 2.5) +
+  geom_smooth(method="lm") +             
+  labs(title="Aggregated Data")
+
+set.seed(123)
+cluster=kmeans(iris[,1:4],3)
+iris$cluster=as.factor(cluster$cluster)
+ggpairs(iris,columns = 1:5, mapping=aes(color=cluster))
+
+set.seed(456)
+performance=c()
+for (i in rep(1:100,times=30)) {
+  clust=kmeans(iris[,1:4],i)
+  performance=c(performance,1-clust$tot.withinss/clust$totss)
+}
+perf_df=data.frame(metrics=performance,number_of_center=rep(1:100,times=30))
+ggplot(perf_df,aes(x=number_of_center,y=metrics)) +
+  geom_point(alpha=0.2) +
+  geom_vline(xintercept = 3,color='red')
 
 
 ## point 

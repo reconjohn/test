@@ -136,6 +136,12 @@ ggplot(iris.wide, aes(x = Length, y = Width, color = Part)) +
 ![](visual_1_files/figure-html/r-8.png)<!-- -->
 
 ```r
+ggpairs(iris)
+```
+
+![](visual_1_files/figure-html/r-9.png)<!-- -->
+
+```r
 ## point 
 data(diamonds)
 str(diamonds)
@@ -162,7 +168,7 @@ diamonds %>%
   geom_smooth()
 ```
 
-![](visual_1_files/figure-html/r-9.png)<!-- -->
+![](visual_1_files/figure-html/r-10.png)<!-- -->
 
 ```r
 ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
@@ -170,7 +176,7 @@ ggplot(diamonds, aes(x = carat, y = price, color = clarity)) +
   geom_smooth()
 ```
 
-![](visual_1_files/figure-html/r-10.png)<!-- -->
+![](visual_1_files/figure-html/r-11.png)<!-- -->
 
 ```r
 ggplot(diamonds, aes(x = carat, y = price)) +
@@ -178,21 +184,21 @@ ggplot(diamonds, aes(x = carat, y = price)) +
   geom_smooth(aes(color = clarity))
 ```
 
-![](visual_1_files/figure-html/r-11.png)<!-- -->
+![](visual_1_files/figure-html/r-12.png)<!-- -->
 
 ```r
 ggplot(diamonds, aes(x = clarity, y = carat, color = price)) +
   geom_point(alpha = 0.5)
 ```
 
-![](visual_1_files/figure-html/r-12.png)<!-- -->
+![](visual_1_files/figure-html/r-13.png)<!-- -->
 
 ```r
 ggplot(diamonds, aes(x = clarity, y = carat, color = price)) +
   geom_point(alpha = 0.5, position = "jitter")
 ```
 
-![](visual_1_files/figure-html/r-13.png)<!-- -->
+![](visual_1_files/figure-html/r-14.png)<!-- -->
 
 ```r
 data("mtcars")
@@ -327,7 +333,7 @@ legend(x = 5, y = 33, legend = levels(mtcars$cyl),
        col = 1:3, pch = 1, bty = "n")
 ```
 
-![](visual_1_files/figure-html/r-14.png)<!-- -->
+![](visual_1_files/figure-html/r-15.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
@@ -336,7 +342,7 @@ ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
   geom_smooth(aes(group = 1), method = "lm", se = FALSE, linetype = 2)
 ```
 
-![](visual_1_files/figure-html/r-15.png)<!-- -->
+![](visual_1_files/figure-html/r-16.png)<!-- -->
 
 ```r
 ## aesthetics 
@@ -346,42 +352,42 @@ ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl, col = am)) +
   geom_point(shape = 21, size = 4, alpha = 0.6)
 ```
 
-![](visual_1_files/figure-html/r-16.png)<!-- -->
+![](visual_1_files/figure-html/r-17.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = wt, y = mpg, size = cyl)) +
   geom_point()
 ```
 
-![](visual_1_files/figure-html/r-17.png)<!-- -->
+![](visual_1_files/figure-html/r-18.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = wt, y = mpg, alpha = cyl)) +
   geom_point()
 ```
 
-![](visual_1_files/figure-html/r-18.png)<!-- -->
+![](visual_1_files/figure-html/r-19.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = wt, y = mpg, shape = cyl)) +
   geom_point()
 ```
 
-![](visual_1_files/figure-html/r-19.png)<!-- -->
+![](visual_1_files/figure-html/r-20.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = wt, y = mpg, label = cyl)) +
   geom_text()
 ```
 
-![](visual_1_files/figure-html/r-20.png)<!-- -->
+![](visual_1_files/figure-html/r-21.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = wt, y = mpg)) +
   geom_text(label = rownames(mtcars), color = 'red')
 ```
 
-![](visual_1_files/figure-html/r-21.png)<!-- -->
+![](visual_1_files/figure-html/r-22.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = mpg, y = qsec, col = cyl, shape = am, 
@@ -389,7 +395,7 @@ ggplot(mtcars, aes(x = mpg, y = qsec, col = cyl, shape = am,
   geom_point()
 ```
 
-![](visual_1_files/figure-html/r-22.png)<!-- -->
+![](visual_1_files/figure-html/r-23.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = mpg, y = 0)) +
@@ -397,21 +403,21 @@ ggplot(mtcars, aes(x = mpg, y = 0)) +
   scale_y_continuous(limits = c(-2,2))
 ```
 
-![](visual_1_files/figure-html/r-23.png)<!-- -->
+![](visual_1_files/figure-html/r-24.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = cyl, y = wt)) +
   geom_jitter(width = 0.1, alpha = 0.6, shape = 1)
 ```
 
-![](visual_1_files/figure-html/r-24.png)<!-- -->
+![](visual_1_files/figure-html/r-25.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = cyl, y = wt)) +
   geom_point(position = position_jitter(0.1))
 ```
 
-![](visual_1_files/figure-html/r-25.png)<!-- -->
+![](visual_1_files/figure-html/r-26.png)<!-- -->
 
 ```r
 ### histogram 
@@ -419,35 +425,35 @@ ggplot(mtcars, aes(mpg)) +
   geom_histogram(aes(y = ..density..), binwidth = 1, fill = "#377EB8")
 ```
 
-![](visual_1_files/figure-html/r-26.png)<!-- -->
+![](visual_1_files/figure-html/r-27.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(mpg, fill = cyl)) +
   geom_histogram(binwidth = 1)
 ```
 
-![](visual_1_files/figure-html/r-27.png)<!-- -->
+![](visual_1_files/figure-html/r-28.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(mpg, fill = cyl)) +
   geom_histogram(binwidth = 1, position = "dodge")
 ```
 
-![](visual_1_files/figure-html/r-28.png)<!-- -->
+![](visual_1_files/figure-html/r-29.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(mpg, color = cyl)) +
   geom_freqpoly(binwidth = 1)
 ```
 
-![](visual_1_files/figure-html/r-29.png)<!-- -->
+![](visual_1_files/figure-html/r-30.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(mpg, fill = cyl)) +
   geom_histogram(binwidth = 1, position = "identity", alpha = 0.4)
 ```
 
-![](visual_1_files/figure-html/r-30.png)<!-- -->
+![](visual_1_files/figure-html/r-31.png)<!-- -->
 
 ```r
 ### bar
@@ -455,7 +461,7 @@ ggplot(mtcars, aes(x = cyl, fill = am)) +
   geom_bar(position = "stack")
 ```
 
-![](visual_1_files/figure-html/r-31.png)<!-- -->
+![](visual_1_files/figure-html/r-32.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = cyl, fill = am)) +
@@ -463,66 +469,66 @@ ggplot(mtcars, aes(x = cyl, fill = am)) +
   scale_fill_brewer()
 ```
 
-![](visual_1_files/figure-html/r-32.png)<!-- -->
+![](visual_1_files/figure-html/r-33.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = cyl, fill = am)) +
   geom_bar(position = "dodge")
 ```
 
-![](visual_1_files/figure-html/r-33.png)<!-- -->
+![](visual_1_files/figure-html/r-34.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(x = cyl, fill = am)) +
   geom_bar(position = position_dodge(0.2), alpha = 0.6)
 ```
 
-![](visual_1_files/figure-html/r-34.png)<!-- -->
+![](visual_1_files/figure-html/r-35.png)<!-- -->
 
 ```r
 ### qplot
 qplot(wt, mpg, data = mtcars)
 ```
 
-![](visual_1_files/figure-html/r-35.png)<!-- -->
+![](visual_1_files/figure-html/r-36.png)<!-- -->
 
 ```r
 qplot(wt, mpg, data = mtcars, size = cyl)
 ```
 
-![](visual_1_files/figure-html/r-36.png)<!-- -->
+![](visual_1_files/figure-html/r-37.png)<!-- -->
 
 ```r
 qplot(wt, mpg, data = mtcars, color = hp)
 ```
 
-![](visual_1_files/figure-html/r-37.png)<!-- -->
+![](visual_1_files/figure-html/r-38.png)<!-- -->
 
 ```r
 qplot(cyl, factor(vs), data = mtcars)
 ```
 
-![](visual_1_files/figure-html/r-38.png)<!-- -->
+![](visual_1_files/figure-html/r-39.png)<!-- -->
 
 ```r
 qplot(cyl, factor(vs), data = mtcars, geom = "jitter")
 ```
 
-![](visual_1_files/figure-html/r-39.png)<!-- -->
+![](visual_1_files/figure-html/r-40.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(cyl, wt, col = am)) +
   geom_point(position = position_jitter(0.2, 0))
 ```
 
-![](visual_1_files/figure-html/r-40.png)<!-- -->
+![](visual_1_files/figure-html/r-41.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(cyl, wt, fill = am)) +
   geom_dotplot(stackdir = "center", binaxis = "y")
 ```
 
-![](visual_1_files/figure-html/r-41.png)<!-- -->
+![](visual_1_files/figure-html/r-42.png)<!-- -->
 
 ```r
 qplot(
@@ -535,7 +541,7 @@ qplot(
 )
 ```
 
-![](visual_1_files/figure-html/r-42.png)<!-- -->
+![](visual_1_files/figure-html/r-43.png)<!-- -->
 
 ```r
 head(ChickWeight)
@@ -557,14 +563,14 @@ ggplot(ChickWeight, aes(x = Time, y = weight)) +
   geom_line(aes(group = Chick))
 ```
 
-![](visual_1_files/figure-html/r-43.png)<!-- -->
+![](visual_1_files/figure-html/r-44.png)<!-- -->
 
 ```r
 ggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +
   geom_line(aes(group = Chick))
 ```
 
-![](visual_1_files/figure-html/r-44.png)<!-- -->
+![](visual_1_files/figure-html/r-45.png)<!-- -->
 
 ```r
 ggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +
@@ -572,11 +578,11 @@ ggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +
   geom_smooth(lwd = 2, se = FALSE)
 ```
 
-![](visual_1_files/figure-html/r-45.png)<!-- -->
+![](visual_1_files/figure-html/r-46.png)<!-- -->
 
 
 ---
 title: "visual_1.R"
 author: "Yohan_Min"
-date: "Wed Nov 28 18:26:09 2018"
+date: "Thu Nov 29 00:00:31 2018"
 ---
