@@ -1,3 +1,4 @@
 # test
 
-Visual tools 
+* Visual tools 
+* Muiltivariate distribution
