@@ -88,7 +88,7 @@ ggplot(iris.wide, aes(x = Length, y = Width, color = Part)) +
 
 
 ## cluster analysis
-ggpairs(iris,mapping=aes(color=Species))
+ggpairs(iris[,-6],mapping=aes(color=Species))
 
 ggpairs(iris, columns = 1:4, 
         aes(color=Species, alpha=0.4), 
