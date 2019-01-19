@@ -25,7 +25,7 @@ library(mvtnorm)
 library(MVN)
 library(sn)
 
-#' Multivariate normality is required for regression, model-based clustering, PCA and ANOVA. Then how to test? qqplot (qqnorm, qqline) to detect heavier tail, skewness, outliers, and clustered data. If any sinble variable fails to be a normality, we can not have joint multivariate.  
+#' Multivariate normality is required for regression, model-based clustering, PCA and ANOVA. Then how to test? qqplot (qqnorm, qqline) to detect heavier tail, skewness, outliers, and clustered data. If any single variable fails to be a normality, we can not have joint multivariate.  
 
 #+ r 
 wine <- read.table("http://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data", sep = ",")
