@@ -9,7 +9,7 @@
 #'     keep_md: true
 #' ---
 
-#' This graph is [based on 2018 Payroll Tax Information](https://isc.uw.edu/wp-content/uploads/2018/01/Payroll-Tax-Information-2018.pdf)
+#' This graph is [based on 2018 Payroll Tax Information](https://isc.uw.edu/wp-content/uploads/2018/01/Payroll-Tax-Information-2018.pdf). The amount of wages is the wages after subtracting withholding allowances, which is calculated $172.90 X number of allowances claimed. Furthermore, Additional $2,000 is substracted from the wages based on the tax exemption treaty with Korean government. 
 
 
 y = c()
