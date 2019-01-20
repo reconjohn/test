@@ -46,4 +46,6 @@ str(data)
 
 ggplot(data, aes(x = `Amount of wages`, y = `Tax withholding`)) +
   geom_line(color = "red") +
+  scale_x_continuous(breaks = round(seq(0, 30000, len = 16))) +
+  scale_y_continuous(breaks = round(seq(0, 10000, len = 21))) +
   ggtitle("Federal Income Tax Withholding for Single") + theme_bw()
