@@ -3,23 +3,18 @@ title: "2018 Payroll Tax"
 author: "Yohan"
 output:
   html_document:
-    preserve_yaml: true
     toc: true
-    toc_float: true
     keep_md: true
 ---
-> This graph is [based on 2018 Payroll Tax Information](https://isc.uw.edu/wp-content/uploads/2018/01/Payroll-Tax-Information-2018.pdf). The amount of wages is the wages after subtracting withholding allowances, which is calculated **$172.90 X number of allowances claimed**. Furthermore, Additional **$2,000** is substracted from the wages based on the tax exemption treaty with Korean government such that the tax treaty allows me to be exempt from federal withholding on the first $2,000 of my wages. However, the treaty is not applicable for the Social Security and Medicare taxes.
+> This graph is [based on 2018 Payroll Tax Information](https://isc.uw.edu/wp-content/uploads/2018/01/Payroll-Tax-Information-2018.pdf). The amount of wages is the wages after subtracting withholding allowances, which is calculated **$172.90 x number of allowances claimed**. Furthermore, additional **$2,000** is substracted from the wages based on the tax exemption treaty with Korean government such that the tax treaty allows me to be exempt from federal withholding on the first $2,000 of my wages. However, the treaty is not applicable for the Social Security and Medicare taxes (Federal Insurance Contributions Act).
 
 
 ```r
 y = c()
-
 pa = c(154, 551, 1767, 3592, 6717, 8488, 20988)
 ba = c(39.7, 185.62, 587.12, 1337.12, 1903.84, 6278.84)
 pc = c(0.1, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37)
-```
 
-```r
 for(i in 1:30000){
   if(i < pa[1]){
     y[i] = 0
@@ -52,7 +47,7 @@ ggplot(data, aes(x = `Amount of wages`, y = `Tax withholding`)) +
   ggtitle("Federal Income Tax Withholding for Single") + theme_bw()
 ```
 
-![](Tax_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](Tax_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
 
 > FICA exemption can be qualified under two rules if a nonresident alien or in a student job class position and enrolled full-time. 
 
@@ -63,5 +58,5 @@ ggplot(data, aes(x = `Amount of wages`, y = `Tax withholding`)) +
 ---
 title: "Tax.R"
 author: "Yohan_Min"
-date: "Sat Jan 19 16:28:15 2019"
+date: "Sat Jan 19 17:12:11 2019"
 ---

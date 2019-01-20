@@ -3,22 +3,17 @@
 #' author: "Yohan"
 #' output:
 #'   html_document:
-#'     preserve_yaml: true
 #'     toc: true
-#'     toc_float: true
 #'     keep_md: true
 #' ---
 
-#' > This graph is [based on 2018 Payroll Tax Information](https://isc.uw.edu/wp-content/uploads/2018/01/Payroll-Tax-Information-2018.pdf). The amount of wages is the wages after subtracting withholding allowances, which is calculated **$172.90 X number of allowances claimed**. Furthermore, Additional **$2,000** is substracted from the wages based on the tax exemption treaty with Korean government such that the tax treaty allows me to be exempt from federal withholding on the first $2,000 of my wages. However, the treaty is not applicable for the Social Security and Medicare taxes.
-
+#' > This graph is [based on 2018 Payroll Tax Information](https://isc.uw.edu/wp-content/uploads/2018/01/Payroll-Tax-Information-2018.pdf). The amount of wages is the wages after subtracting withholding allowances, which is calculated **$172.90 x number of allowances claimed**. Furthermore, additional **$2,000** is substracted from the wages based on the tax exemption treaty with Korean government such that the tax treaty allows me to be exempt from federal withholding on the first $2,000 of my wages. However, the treaty is not applicable for the Social Security and Medicare taxes (Federal Insurance Contributions Act).
 
 y = c()
-
 pa = c(154, 551, 1767, 3592, 6717, 8488, 20988)
 ba = c(39.7, 185.62, 587.12, 1337.12, 1903.84, 6278.84)
 pc = c(0.1, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37)
 
-#+
 for(i in 1:30000){
   if(i < pa[1]){
     y[i] = 0
