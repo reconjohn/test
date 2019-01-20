@@ -1,13 +1,14 @@
-#' ---
-#' title: "Chrsitams Tree"
-#' author: "Yohan"
-#' output:
-#'   html_document:
-#'     toc: true
-#'     keep_md: true
-#' ---
+---
+title: "Chrsitams Tree"
+author: "Yohan"
+output:
+  html_document:
+    toc: true
+    keep_md: true
+---
 
 
+```r
 ChristmasTree <- read.csv("https://raw.githubusercontent.com/t-redactyl/Blog-posts/master/Christmas%20tree%20base%20data.csv")
 
 names(ChristmasTree)[1] <- "Tree.X"
@@ -103,3 +104,18 @@ tree1 <- tree +
   )
 
 tree1
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x,
+## x$y, : font family not found in Windows font database
+```
+
+![](ChristmasTree_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
+
+
+---
+title: "ChristmasTree.R"
+author: "Yohan_Min"
+date: "Sat Jan 19 17:57:59 2019"
+---
