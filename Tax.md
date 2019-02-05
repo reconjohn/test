@@ -5,6 +5,7 @@ output:
   html_document:
     toc: true
     keep_md: true
+  pdf_document: default
 ---
 > This graph is [based on 2018 Payroll Tax Information](https://isc.uw.edu/wp-content/uploads/2018/01/Payroll-Tax-Information-2018.pdf). The amount of wages is the wages after subtracting withholding allowances, which is calculated **$172.90 x number of allowances claimed**. Furthermore, additional **$2,000** is substracted from the wages based on the tax exemption treaty with Korean government such that the tax treaty allows me to be exempt from federal withholding on the first $2,000 of my wages. However, the treaty is not applicable for the Social Security and Medicare taxes (Federal Insurance Contributions Act).
 
@@ -58,5 +59,5 @@ ggplot(data, aes(x = `Amount of wages`, y = `Tax withholding`)) +
 ---
 title: "Tax.R"
 author: "Yohan_Min"
-date: "Sat Jan 19 17:12:11 2019"
+date: "Mon Jan 28 13:50:36 2019"
 ---
