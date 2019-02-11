@@ -138,7 +138,7 @@ ggplot(iris.wide, aes(x = Length, y = Width, color = Part)) +
 
 ```r
 ## cluster analysis
-ggpairs(iris,mapping=aes(color=Species))
+ggpairs(iris[,-6],mapping=aes(color=Species))
 ```
 
 ![](visual_1_files/figure-html/r-9.png)<!-- -->
@@ -533,49 +533,88 @@ ggplot(mtcars, aes(x = cyl, fill = am)) +
 ![](visual_1_files/figure-html/r-39.png)<!-- -->
 
 ```r
-### qplot
-qplot(wt, mpg, data = mtcars)
+ggplot(mtcars, aes(x = 1, fill = factor(cyl))) +
+  geom_bar() +
+  coord_polar(theta = "y")
 ```
 
 ![](visual_1_files/figure-html/r-40.png)<!-- -->
 
 ```r
-qplot(wt, mpg, data = mtcars, size = cyl)
+ggplot(mtcars, aes(x = 1, fill = cyl)) +
+  geom_bar(width = .1) +
+  scale_x_continuous(limits = c(0.5,1.5)) +
+  coord_polar(theta = "y")
 ```
 
 ![](visual_1_files/figure-html/r-41.png)<!-- -->
 
 ```r
-qplot(wt, mpg, data = mtcars, color = hp)
+### facet 
+mtcars$cyl_am <- paste(mtcars$cyl, mtcars$am, sep = "_")
+myCol <- rbind(brewer.pal(9, "Blues")[c(3,6,8)],
+               brewer.pal(9, "Reds")[c(3,6,8)])
+
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl_am)) +
+  geom_point() +
+  scale_color_manual(values = myCol)
 ```
 
 ![](visual_1_files/figure-html/r-42.png)<!-- -->
 
 ```r
-qplot(cyl, factor(vs), data = mtcars)
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl_am, size = disp)) +
+  geom_point() +
+  scale_color_manual(values = myCol) +
+  facet_grid(gear ~ vs)
 ```
 
 ![](visual_1_files/figure-html/r-43.png)<!-- -->
 
 ```r
-qplot(cyl, factor(vs), data = mtcars, geom = "jitter")
+### qplot
+qplot(wt, mpg, data = mtcars)
 ```
 
 ![](visual_1_files/figure-html/r-44.png)<!-- -->
+
+```r
+qplot(wt, mpg, data = mtcars, size = cyl)
+```
+
+![](visual_1_files/figure-html/r-45.png)<!-- -->
+
+```r
+qplot(wt, mpg, data = mtcars, color = hp)
+```
+
+![](visual_1_files/figure-html/r-46.png)<!-- -->
+
+```r
+qplot(cyl, factor(vs), data = mtcars)
+```
+
+![](visual_1_files/figure-html/r-47.png)<!-- -->
+
+```r
+qplot(cyl, factor(vs), data = mtcars, geom = "jitter")
+```
+
+![](visual_1_files/figure-html/r-48.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(cyl, wt, col = am)) +
   geom_point(position = position_jitter(0.2, 0))
 ```
 
-![](visual_1_files/figure-html/r-45.png)<!-- -->
+![](visual_1_files/figure-html/r-49.png)<!-- -->
 
 ```r
 ggplot(mtcars, aes(cyl, wt, fill = am)) +
   geom_dotplot(stackdir = "center", binaxis = "y")
 ```
 
-![](visual_1_files/figure-html/r-46.png)<!-- -->
+![](visual_1_files/figure-html/r-50.png)<!-- -->
 
 ```r
 qplot(
@@ -588,7 +627,7 @@ qplot(
 )
 ```
 
-![](visual_1_files/figure-html/r-47.png)<!-- -->
+![](visual_1_files/figure-html/r-51.png)<!-- -->
 
 ```r
 head(ChickWeight)
@@ -610,14 +649,14 @@ ggplot(ChickWeight, aes(x = Time, y = weight)) +
   geom_line(aes(group = Chick))
 ```
 
-![](visual_1_files/figure-html/r-48.png)<!-- -->
+![](visual_1_files/figure-html/r-52.png)<!-- -->
 
 ```r
 ggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +
   geom_line(aes(group = Chick))
 ```
 
-![](visual_1_files/figure-html/r-49.png)<!-- -->
+![](visual_1_files/figure-html/r-53.png)<!-- -->
 
 ```r
 ggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +
@@ -625,11 +664,11 @@ ggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +
   geom_smooth(lwd = 2, se = FALSE)
 ```
 
-![](visual_1_files/figure-html/r-50.png)<!-- -->
+![](visual_1_files/figure-html/r-54.png)<!-- -->
 
 
 ---
 title: "visual_1.R"
 author: "Yohan_Min"
-date: "Thu Nov 29 01:47:01 2018"
+date: "Mon Feb 11 12:52:01 2019"
 ---

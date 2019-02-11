@@ -16,6 +16,7 @@ library(dplyr)
 library(ggplot2)
 library(tidyr)
 library(GGally)
+library(RColorBrewer)
 
 #+ r
 ## gapminder
@@ -228,6 +229,30 @@ ggplot(mtcars, aes(x = cyl, fill = am)) +
 
 ggplot(mtcars, aes(x = cyl, fill = am)) +
   geom_bar(position = position_dodge(0.2), alpha = 0.6)
+
+ggplot(mtcars, aes(x = 1, fill = factor(cyl))) +
+  geom_bar() +
+  coord_polar(theta = "y")
+
+ggplot(mtcars, aes(x = 1, fill = cyl)) +
+  geom_bar(width = .1) +
+  scale_x_continuous(limits = c(0.5,1.5)) +
+  coord_polar(theta = "y")
+
+### facet 
+mtcars$cyl_am <- paste(mtcars$cyl, mtcars$am, sep = "_")
+myCol <- rbind(brewer.pal(9, "Blues")[c(3,6,8)],
+               brewer.pal(9, "Reds")[c(3,6,8)])
+
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl_am)) +
+  geom_point() +
+  scale_color_manual(values = myCol)
+
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl_am, size = disp)) +
+  geom_point() +
+  scale_color_manual(values = myCol) +
+  facet_grid(gear ~ vs)
+
 
 ### qplot
 qplot(wt, mpg, data = mtcars)

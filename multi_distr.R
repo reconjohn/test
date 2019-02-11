@@ -34,7 +34,7 @@ View(wine)
 colnames(wine) <- c('Type', 'Alcohol', 'Malic', 'Ash', 'Alcalinity', 'Magnesium', 'Phenols', 'Flavanoids', 'Nonflavanoids','Proanthocyanins', 'Color', 'Hue', 'Dilution', 'Proline')
 wine$Type <- as.factor(wine$Type)
 
-## plots
+#' ## plots
 var.wine <- var(wine[2:5])
 cor.wine <- cor(wine[, 2:5])
 corrplot(cor.wine, method = "ellipse")
@@ -43,14 +43,14 @@ splom( ~ wine[,2:5],  pch = 16, col = wine$Type)
 (wine.gg <- ggpairs(data = wine, columns = 2:5))
 scatterplot3d(wine[, c(2, 3, 5)], color = wine$Type, angle = 70)
 
-## samples
+#' ## Multivariate normal samples
 mu.sim <- c(2, -2)
 sigma.sim <- matrix(c(9,5,5,4), 2,2)
 multnorm.sample <- rmvnorm(n = 100, mean = mu.sim, sigma = sigma.sim)
 head(multnorm.sample)
 plot(multnorm.sample)
 
-## density 
+#' ## Density 
 multnorm.dens <- dmvnorm(multnorm.sample, mean = mu.sim, sigma = sigma.sim)
 scatterplot3d(cbind(multnorm.sample, multnorm.dens),    
               color="blue", pch="", type = "h",             
@@ -61,20 +61,23 @@ mvds <- dmvnorm(x = mvals, mean = mu.sim, sigma = sigma.sim)
 matrix_mvds <-  matrix(mvds, nrow = 40)
 persp(matrix_mvds, theta = 80, phi = 30, expand = 0.6, shade = 0.2, col = "lightblue", xlab = "x", ylab = "y", zlab = "dens")
 
+#' ## Probability 
 pmvnorm(lower = c(-1, -1), upper = c(1, 1))
 pmvnorm(lower = c(-5, -5), upper = c(5, 5), mean = mu.sim, sigma = sigma.sim)
 
+#' ## Quantile
 qmvnorm(0.9, tail = "both", sigma = diag(2))
 qmvnorm(0.95, tail = "both", mean = mu.sim, sigma = sigma.sim)
 
+#' ## Normality test
 qqnorm(multnorm.sample[, 1])
 qqline(multnorm.sample[, 1])
 
 mvn(multnorm.sample)
 mvn(wine[, 2:5])
 
-## t distribution (e.g. financial stock time series)
-### rmvt, dmvt, qmvt, pmvt
+#' ## t distribution (e.g. financial stock time series)
+#' ### rmvt, dmvt, qmvt, pmvt
 multt.sample <- rmvt(n = 200,sigma = sigma.sim, df = 5, delta = mu.sim)
 mvn(multt.sample, multivariatePlot = "qq")
 multt.dens <- dmvt(x = multt.sample, delta = mu.sim, sigma = sigma.sim, df = 5, log = F)
@@ -87,7 +90,7 @@ pmvt(lower = c(-5, -5), upper = c(5, 5),
 # CDF, e.g., Probability for all 3 stocks between $100 and 200. 
 qmvt(p = 0.9, tail = "both", sigma = diag(2)) # inverse CDF, showing the circle of radius for 90%
 
-## skew distribution
+#' ## skew distribution
 skewnorm.sample <- rmsn(n = 100, xi = mu.sim, Omega = sigma.sim, alpha = c(4, -4))
 ggplot(as.data.frame(skewnorm.sample), aes(x = V1, y = V2)) + 
   geom_point() + 
@@ -108,3 +111,8 @@ skewt.s <- rmst(n = 2000, xi = xi, Omega = omega, alpha = alpha, nu = 4)
 ggpairs(data = as.data.frame(skewt.s))
 msn.mle(y = skewt.s, opt.method = "BFGS")
 
+#' ## Multi dimentional scaling (MDS)
+state.dist <- dist(wine[-1])
+mds.state <- cmdscale(state.dist, k=3) 
+mds.state_df <- data.frame(mds.state)
+scatterplot3d(mds.state_df, color = wine$Type, pch = 19, type = "h", lty.hplot = 2)
