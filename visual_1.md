@@ -670,5 +670,5 @@ ggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +
 ---
 title: "visual_1.R"
 author: "Yohan_Min"
-date: "Mon Feb 11 12:52:01 2019"
+date: "Mon Feb 11 14:48:38 2019"
 ---
