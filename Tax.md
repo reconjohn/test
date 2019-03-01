@@ -59,5 +59,5 @@ ggplot(data, aes(x = `Amount of wages`, y = `Tax withholding`)) +
 ---
 title: "Tax.R"
 author: "Yohan_Min"
-date: "Mon Jan 28 13:50:36 2019"
+date: "Thu Feb 28 18:11:55 2019"
 ---
