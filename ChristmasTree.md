@@ -99,7 +99,7 @@ tree <- tree +
 
 tree1 <- tree +
   annotate("text",
-           x = 11, y = 20, label = "Happy New Year!",
+           x = 11, y = 20, label = "Happy July 7! Wang and Stephano!",
            family = "Luminari", size = 12
   )
 
@@ -117,5 +117,5 @@ tree1
 ---
 title: "ChristmasTree.R"
 author: "Yohan_Min"
-date: "Sat Jan 19 17:57:59 2019"
+date: "2019-07-07"
 ---

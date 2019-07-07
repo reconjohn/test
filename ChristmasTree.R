@@ -98,7 +98,7 @@ tree <- tree +
 
 tree1 <- tree +
   annotate("text",
-           x = 11, y = 20, label = "Happy New Year!",
+           x = 11, y = 20, label = "Happy July 7! Wang and Stephano!",
            family = "Luminari", size = 12
   )
 
