@@ -20,7 +20,7 @@ tree <- ggplot() +
   theme_bw() +
   scale_x_continuous(breaks = NULL) +
   scale_y_continuous(breaks = NULL) +
-  labs(x = "Best wihses for 2019 - Yohan", y = "")
+  labs(x = "To my soulmate - Yohan, Nov. 15, 2019", y = "")
 
 Desired.Lights <- 50
 Total.Lights <- sum(round(Desired.Lights * 0.35) + round(Desired.Lights * 0.20) +
@@ -98,7 +98,7 @@ tree <- tree +
 
 tree1 <- tree +
   annotate("text",
-           x = 11, y = 20, label = "Happy July 7! Wang and Stephano!",
+           x = 11, y = 20, label = "JIA YOU Today! The NEW DAY! for Di!",
            family = "Luminari", size = 8
   )
 
