@@ -1,5 +1,5 @@
 ---
-title: "Chrsitams Tree"
+title: "D Tree"
 author: "Yohan"
 output:
   html_document:
@@ -21,7 +21,7 @@ tree <- ggplot() +
   theme_bw() +
   scale_x_continuous(breaks = NULL) +
   scale_y_continuous(breaks = NULL) +
-  labs(x = "To my soulmate - Yohan, Nov. 15, 2019", y = "")
+  labs(x = "To soulmate - Yohan, Nov. 15, 2019", y = "")
 
 Desired.Lights <- 50
 Total.Lights <- sum(round(Desired.Lights * 0.35) + round(Desired.Lights * 0.20) +
@@ -99,7 +99,7 @@ tree <- tree +
 
 tree1 <- tree +
   annotate("text",
-           x = 11, y = 20, label = "JIA YOU Today! The NEW DAY! for Di!",
+           x = 11, y = 20, label = "JIA YOU D! Today, The NEW DAY!",
            family = "Luminari", size = 8
   )
 
@@ -113,6 +113,7 @@ tree1
 
 ![](ChristmasTree_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
 
+![Fall Tree](tree.jpg)
 
 ---
 title: "ChristmasTree.R"
