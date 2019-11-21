@@ -141,3 +141,16 @@ tree1
 #' ![A Tree of Hope](tree.jpg){width=700}
 #' 
 #' ![Happy Life Journey to Come](bike.jpg){width=700}
+#' 
+#' > * ## How do I get the best out of life?
+#' * ## Face your past without regret.
+#' * ## Handle your present with confidence.
+#' * ## Prepare for the future without fear.
+#' 
+#' > * ## Keep the faith and drop the fear.
+#' * ## Do not believe your doubts
+#' * ## and never doubt your belief.
+#' 
+#' > * ## Trust God.
+#' * ## Life is wonderful,
+#' * ## if you know how to live.
