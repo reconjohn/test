@@ -154,5 +154,3 @@ tree1
 #' > * ## Trust God.
 #' * ## Life is wonderful,
 #' * ## if you know how to live.
-#' 
-
