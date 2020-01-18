@@ -35,7 +35,7 @@ God (who chose Jacob from the beginning, using his weaknesses, and his free will
 
 Before Peter was still growing up, despite his weakness, Jesus said that Peter would open the kingdom of God with the key of heaven. He also knew that Peter would deny Him three times, and through this event He raised and disciplined Peter, who would be greatly used as an Apostle with the key of heaven. After the resurrection, Jesus met Peter and asked him three times, do you love me? Peter was born again from the icon of despair as the holy and mighty apostle of God. God knows everything,  my weaknesses, my failures, my sins that I would make in the future, and my end, and has already made plans to use them for my salvation and leading me in good ways. 
 
-- Simon Peter answered, "You are the Christ, the Son of the living God." - Matt 16:16
+- And I tell you that you are Peter, and on this rock I will build my church, and the gates of Hades will not overcome it. I will give you the keys of the kingdom of heaven; whatever you bind on earth will be bound in heaven, and whatever you loose on earth will be loosed in heaven." - Matt 16:18-19
 
 - When you are persecuted in one place, flee to another. I tell you the truth, you will not finish going through the cities of Israel before the Son of Man comes. - Matt 10:33
 
