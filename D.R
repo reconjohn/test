@@ -39,7 +39,7 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE)
 #'
 #'- And I tell you that you are Peter, and on this rock I will build my church, and the gates of Hades will not overcome it. I will give you the keys of the kingdom of heaven; whatever you bind on earth will be bound in heaven, and whatever you loose on earth will be loosed in heaven." - Matt 16:18-19
 #'
-#'- When you are persecuted in one place, flee to another. I tell you the truth, you will not finish going through the cities of Israel before the Son of Man comes. - Matt 10:33
+#'- But whoever disowns me before men, I will disown him before my Father in heaven. - Matt 10:33
 #'
 #'- Peter replied, "Man, I don't know what you're talking about!" Just as he was speaking, the rooster crowed. The Lord turned and looked straight at Peter. Then Peter remembered the word the Lord had spoken to him: "Before the rooster crows today, you will disown me three times." And he went outside and wept bitterly. - Luke 22:60-62
 #'
