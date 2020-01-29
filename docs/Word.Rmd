@@ -35,6 +35,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE,warning=FALSE, message=FALSE)
 ```
 
+# I have been crucified with Christ and I no longer live, but Christ lives in me. - Galatians 2:20 {#index}
+
+I'd be the moon so I can reflect the shine from God on you during your darkest hours.
+
+![Humble but Strong...](butterfly.jpg)
 
 # Jan. 28, 2020 - Forgiven, so we love God. 
  
