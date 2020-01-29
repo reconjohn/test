@@ -39,7 +39,7 @@ knitr::opts_chunk$set(echo = TRUE,warning=FALSE, message=FALSE)
 
 I'd be the moon so I can reflect the shine from God on you during your darkest hours.
 
-![Humble but Strong...](butterfly.jpg)
+![Humble but Strong...](butterfly.jpg){width=600}
 
 # Jan. 28, 2020 - Forgiven, so we love God. 
  
