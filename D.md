@@ -1,7 +1,7 @@
 ---
 title: "God knows my end, and has prepared a plan for my salvation"
 author: "Yohan"
-date: "Jan. 18, 2020"
+date: "Jan. 28, 2020"
 output:
   html_document:
     toc: true
@@ -16,6 +16,18 @@ body, td {
 </style>
 
 
+
+### Jan. 28, 2020
+
+The woman still living in sin had already heard about Jesus, and she was receiving the grace of His word, and she had the opportunity to meet Him in person finally. By loving Jesus with gratitude for the grace received, she breaks the expensive perfume and washes Jesus' feet with it. Jesus publicly declares that the sin of a woman is forgiven. 
+
+It is not that I have been forgiven of my sins because I love God, but that I have already been forgiven freely by grace, and I love God as a result. As the story of the two men forgiven the debt, the debt was already forgiven freely by grace. My sins have already been forgiven by the blood of Jesus. All I have to do is to believe it and love God. To the woman forgiven by faith, Jesus tells her to go in peace. But even after the remission of sins, the woman's environment will remain the same with shame and humiliation. However, she can now be at peace with faith in Jesus, not in environment or humanity condemnation anymore. Jesus showed that He did not judge or condemn our weakness, nor our sins, but more focus on our physical and spiritual needs. Later, when we stand for judgement before God, He will see how much we loved God and neighbor, not how much we sinned as Jesus showed. 
+
+- When a woman who had lived a sinful life in that town learned that Jesus was eating at the Pharisee's house, she brought an alabaster jar of perfume,...Neither of them had the money to pay him back, so he canceled the debts of both. Now which of them will love him more?"...Therefore, I tell you, her many sins have been forgiven--for she loved much. But he who has been forgiven little loves little." Then Jesus said to her, "Your sins are forgiven." The other guests began to say among themselves, "Who is this who even forgives sins?" Jesus said to the woman, "Your faith has saved you; go in peace." - Luke 7:37, 42, 47-50
+
+- being fully persuaded that God had power to do what he had promised. This is why "it was credited to him as righteousness." The words "it was credited to him" were written not for him alone, but also for us, to whom God will credit righteousness--for us who believe in him who raised Jesus our Lord from the dead. He was delivered over to death for our sins and was raised to life for our justification. - Romans 4:21-25
+
+### Jan. 18, 2020
 
 I meditated on Jacob, who deceived his brother, Esau, and ran away. Isaac, the father, tried to bless Esau, but Jacob deceived his father and got blessed. Jacob was running away from the angry Esau who tried to kill Jacob. Esau was clearly a victim. But God was with Jacob. If Jacob had not lied and deceived, Esau would have been blessed, so would Esau, not Jacob, become the father of God's people? It seems that God already knew the end and chose Jacob from the beginning. God already knew the nature of Jacob, who lied and deceived, and God completed his salvation in consideration of Jacob's free will. Likewise, God knows my good, the weak, the sin, the failure, everything that is going to happen, and leads me in a good way under His plan. 
 
@@ -59,5 +71,5 @@ Later, God reluctantly gave a king to the Israelites as they had asked a king ea
 ---
 title: "D.R"
 author: "Yohan_Min"
-date: "2020-01-18"
+date: "2020-01-28"
 ---
