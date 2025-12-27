@@ -8,7 +8,7 @@ output:
   bookdown::gitbook:
     config:
       toc:
-        collapse: no
+        collapse: yes
         scroll_highlight: yes
         before: null
         after: null
@@ -40,6 +40,19 @@ knitr::opts_chunk$set(echo = TRUE,warning=FALSE, message=FALSE)
 I'd be the moon so I can reflect the shine from God on you during your darkest hours.
 
 ![Humble but Strong...](butterfly.jpg){width=600}
+
+# Dec. 27, 2025 - Fix your eyes only on God
+
+Psalm 61:1-62:12
+
+- 62:11-12 One thing God has spoken, two things I have heard: “Power belongs to you, God, and with you, Lord, is unfailing love”; and, “You reward everyone according to what they have done."
+
+I don't need to judge those who insult me. I'm not a judge, but God. 
+
+It has been three days since we stopped speaking. Di kept making decisions without asking for my opinion. We had planned a family movie night, but just because it was late, she decided not to watch. When we finally did watch the first part, she decided to change the movie because Leah didn't want to watch it. She told me to leave if I didn't like it, and then she watched it alone with Leah. I felt insulted and disrespected that she made decisions without asking me, so I stopped talking to her. In the middle of the night, Di made Leah cry. I ignored it at first, but eventually, I helped Leah after she used the bathroom. Di left the house in anger, and Leah fell asleep.
+
+Since I am not talking to her, I came to the office on this sunny Saturday, but it just doesn't feel right. I'm afraid God will hold me accountable for what I have done to our family. I'm frustrated that I felt forced to act in a way I didn't want to; I know it wasn't right. Now I am in a dilemma: Should I wait until Di comes to talk to me, or should I be the one to reach out first?
+
 
 # Dec. 23, 2025 - The results of sin 
 
